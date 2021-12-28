@@ -17,7 +17,8 @@ RUN apt-get -y update \
    libglx-mesa0 \
    libglu1-mesa \
    libxrandr2 \
-   libxi6 
+   libxi6 \
+   code
 
 # Remove light-locker to prevent screen lock
 ARG TURBOVNC_VERSION=2.2.6
