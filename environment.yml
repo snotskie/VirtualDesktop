@@ -9,5 +9,6 @@ dependencies:
   - libglu
   - glew
   - pymol
+  - pyqt5
   - pip:
       - .
