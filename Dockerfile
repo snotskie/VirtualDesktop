@@ -4,6 +4,7 @@ FROM jupyter/base-notebook:python-3.7.6
 USER root
 
 RUN apt-get -y update \
+ && wget https://go.microsoft.com/fwlink/?LinkID=760868 -O vscode.deb \
  && apt-get install -y dbus-x11 \
    firefox \
    xfce4 \
@@ -18,7 +19,7 @@ RUN apt-get -y update \
    libglu1-mesa \
    libxrandr2 \
    libxi6 \
-   code
+ && apt install vscode.deb
 
 # Remove light-locker to prevent screen lock
 ARG TURBOVNC_VERSION=2.2.6
